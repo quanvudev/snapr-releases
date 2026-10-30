@@ -1,0 +1,37 @@
+{
+    "version": "1.9.0",
+    "description": "Screenshots, screen recording and text capture from the tray",
+    "homepage": "https://github.com/quanvudev/snapr-releases",
+    "license": "Proprietary",
+    "notes": "Close Snapr before running scoop update snapr.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/quanvudev/snapr-releases/releases/download/v1.9.0/Snapr_1.9.0_x64.exe#/snapr.exe",
+            "hash": "a4e13a7f9f48a475e458e8f7973c936ccdc3750d80feb57119d6b6ab03d2e8c9"
+        }
+    },
+    "bin": "snapr.exe",
+    "shortcuts": [
+        [
+            "snapr.exe",
+            "Snapr"
+        ]
+    ],
+    "uninstaller": {
+        "script": [
+            "$run = 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run'",
+            "$entry = (Get-ItemProperty $run -ErrorAction SilentlyContinue).snapr",
+            "if ($entry -and $entry.Contains((Split-Path $dir))) { Remove-ItemProperty $run -Name snapr }"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/quanvudev/snapr-releases"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/quanvudev/snapr-releases/releases/download/v$version/Snapr_$version_x64.exe#/snapr.exe"
+            }
+        }
+    }
+}
