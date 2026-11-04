@@ -1,13 +1,13 @@
 {
-    "version": "1.11.1",
+    "version": "1.11.2",
     "description": "Screenshots, screen recording and text capture from the tray",
     "homepage": "https://github.com/quanvudev/snapr-releases",
     "license": "Proprietary",
     "notes": "Close Snapr before running scoop update snapr.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/quanvudev/snapr-releases/releases/download/v1.11.1/Snapr_1.11.1_x64.exe#/snapr.exe",
-            "hash": "43190743e446b39d1ca5b692b7827b88ee219d2d11c566e57cfa30d8875cbe51"
+            "url": "https://github.com/quanvudev/snapr-releases/releases/download/v1.11.2/Snapr_1.11.2_x64.exe#/snapr.exe",
+            "hash": "52c82e1d91db46b551af037a402d6b341ea9b167b5531bb2b9331db31a824c3f"
         }
     },
     "bin": "snapr.exe",
